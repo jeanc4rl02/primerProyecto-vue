@@ -89,6 +89,7 @@ Vue.component("formulario-registro", {
         this.usuarios.push({
           nombres: this.nuevoNombre,
           apellidos: this.nuevoApellido,
+          nombreCompleto: this.nuevoNombre + " " + this.nuevoApellido,
           usuario: this.nuevoUsuario,
           edad: this.edad,
           clave: this.clave,
