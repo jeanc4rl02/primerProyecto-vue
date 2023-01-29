@@ -1,31 +1,29 @@
 Vue.component("formulario-registro", {
-  template: `<div>
-                  <form>
-                <label>Nombres:</label> <br>
-                <input type="text" v-model = "nuevoNombre"><br>
-
-                <label>Apellidos:</label><br>
-              <input type= "text" v-model = "nuevoApellido"><br>
-
-              <label>Usuario:</label> <br>
-              <input type="text" v-model = "nuevoUsuario"><br>  
-              
-              <label>Fecha de nacimiento:</label> <br>
-<input type="date" v-model = "nuevaFecha"><br>
-
-              <ul>
-                <li v-if="error == true">El usuario ya se encuentra registrado.</li>
-              </ul>
-
-                <input type="submit" @click.prevent="enviarForm">
-
-                </form>
-
-                <h2>Usuarios registrados:</h2>
-              <ul>
-                <li v-for="(e, i) in usuarios" :key="i">{{e.nombres}} {{e.apellidos}}</li>
-              </ul>
-              
+  template: `<div class="abs-center">
+                    <form>
+                  <div class="card">
+                    <div class="col-11" >
+                      <label class="form-label">Nombres:</label> <br>
+                      <input type="text" v-model = "nuevoNombre" class="form-control"><br>
+                    </div>
+                    <div class="col-11">
+                      <label class="form-label">Apellidos:</label><br>
+                      <input type= "text" v-model = "nuevoApellido" class="form-control"><br>
+                    </div>
+                    <div class="col-11">
+                      <label class="form-label">Usuario:</label> <br>
+                      <input type="text" v-model = "nuevoUsuario" class="form-control"><br>
+                    </div>
+                    <div class="col-11">
+                      <label class="form-label">Fecha de nacimiento:</label> <br>
+                      <input type="date" v-model = "nuevaFecha" class="form-control"><br>
+                    </div>
+                        <ul>
+                          <li v-if="error == true">El usuario ya se encuentra registrado.</li>
+                        </ul>
+                    <div class="col-auto">
+                        <input value="Guardar "type="submit" @click.prevent="enviarForm" class="btn btn-primary col-11">
+                    </div>
   </div>`,
   data() {
     return {
